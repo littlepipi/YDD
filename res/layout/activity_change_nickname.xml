@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/change_nickname"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#36cd00" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="修改昵称"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/change_nickname_back"
+            android:layout_width="50.0dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#36cd00"
+            android:contentDescription="@null"
+            android:src="@drawable/arrow_left_gray_white" />
+    </RelativeLayout>
+
+    <app.example.widget.OverScrollView
+        android:id="@+id/change_nickname_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="20dip"
+                android:background="#d3d3d3"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape_transparent_post"
+                    android:hint="请输入新的昵称"
+                    android:scrollHorizontally="false"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#d3d3d3"
+                android:orientation="vertical" />
+
+            <Button
+                android:id="@+id/change_nickname_finish"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="100dip"
+                android:background="@drawable/text_orange_pink"
+                android:text="确认修改"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </app.example.widget.OverScrollView>
+
+</LinearLayout>

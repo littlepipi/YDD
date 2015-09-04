@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <app.example.widget.OverScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/mine_back"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/head_portrait"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/xiaoma_one"
+                        android:visibility="invisible"
+                         />
+
+                    <Button
+                        android:id="@+id/login_button"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/buttoneffect"
+                        android:text="点击登录"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        
+                         />
+
+                    <TextView
+                        android:id="@+id/nickname_unlogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="您还未登录，请点击登录"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/screen_hight_mine_unlogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="360dip" >
+
+                    <GridView
+                        android:id="@+id/fragment_mine_unlogin_gridview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#d3d3d3"
+                        android:gravity="center"
+                        android:horizontalSpacing="1dip"
+                        android:listSelector="#808080"
+                        android:numColumns="3"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="1dip" />
+                </RelativeLayout>
+            </LinearLayout>
+        </app.example.widget.OverScrollView>
+
+        <RelativeLayout
+            android:id="@+id/mine"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#2f000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="我的"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

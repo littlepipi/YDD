@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d3d3d3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/category_left"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="#36cd00" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="分类"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/fragment_home_page_tab_left_more_back"
+            android:layout_width="50.0dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#36cd00"
+            android:contentDescription="@null"
+            android:src="@drawable/arrow_left_gray_white" />
+    </RelativeLayout>
+
+    <app.example.widget.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/screen_hight_kind_left"
+            android:layout_width="fill_parent"
+            android:layout_height="600dip" >
+
+            <GridView
+                android:id="@+id/fragment_home_page_tab_left_kind_gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:horizontalSpacing="1dip"
+                android:layoutAnimation="@anim/navagation_gridview_anim"
+                android:listSelector="#808080"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dip" />
+        </RelativeLayout>
+    </app.example.widget.OverScrollView>
+
+</LinearLayout>

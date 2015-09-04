@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:clickable="true" />
+
+    <!-- ***********初始化时隐藏该布局 -->
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/putong1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bmapView"
+            android:layout_alignBottom="@+id/bmapView"
+            android:layout_alignParentLeft="true"
+            android:text="失物" />
+
+        <Button
+            android:id="@+id/weixing1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/putong"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="60dp"
+            android:text="招领" />
+
+        <ImageView
+            android:id="@+id/thingslocation1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/change_information" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/center1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/address_icon_location" />
+
+   <include      
+       layout="@layout/map_like"
+       android:visibility="gone" />
+
+</RelativeLayout>

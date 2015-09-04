@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green"
+    android:weightSum="1" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo_back_register" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/login_head_front"
+        android:textColor="#808080"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/login_head_back"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/middle"
+        android:layout_width="30dip"
+        android:layout_height="120dip"
+        android:layout_below="@+id/tv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/register_head_for_individual"
+        android:layout_width="120dip"
+        android:layout_height="120dip"
+        android:layout_alignTop="@+id/middle"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/middle"
+        android:background="@drawable/buttoneffect_register"
+        android:text="学校"
+        android:textColor="#4169e1"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/register_head_for_institution"
+        android:layout_width="120dip"
+        android:layout_height="120dip"
+        android:layout_alignTop="@+id/middle"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/middle"
+        android:background="@drawable/buttoneffect_register"
+        android:text="城市"
+        android:textColor="#4169e1"
+        android:textSize="20sp" />
+
+</RelativeLayout>

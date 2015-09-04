@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tx.ydd.app"
+    android:versionCode="2"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 拍照 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 短信验证 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- 头像 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 百度地图 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 分享的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="app.example.application.MyApplication"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden"
+        android:icon="@drawable/xiaoma"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <service
+            android:name="app.example.service.Myservice"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="app.example.service.SystemService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="llYD2qPU5WosaQt7hixT8eDB" /> <!-- zKelIkIZvGNGHoCjSPCgFZR4 -->
+<!-- llYD2qPU5WosaQt7hixT8eDB -->
+        <activity
+            android:name="app.example.activity.Splash"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.example.activity.MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+
+            <!--
+               KakaoTalk ,分享应用的时候需要添加这个intent-filter,用于点击应用按钮跳转到APP
+               	其中android:scheme="kakaoc53410d71a7d6b96671aac1bd13a1982"是由"kakao"+APPKey               	
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kakaolink"
+                    android:scheme="kakao48d3f524e4a636b08d81b3ceb50f1003" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.example.activity.MainActivityBackground"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="app.example.activity.KindLeft"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="app.example.activity.KindRight"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="app.example.activity.PostFoundMessage"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="app.example.activity.PostLostMessage"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="app.example.activity.PostDiscoverMessage"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="app.example.activity.LoginActvity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <!-- 注册 -->
+        <activity
+            android:name="app.example.activity.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="app.example.activity.RegisterOrganizationPageTwoActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="app.example.activity.RegisterOrganizationPageOneActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="app.example.activity.RegisterPersonalPageActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity android:name="app.example.activity.AccountSettingActivity" >
+        </activity>
+        <activity android:name="app.example.activity.ChangeNicknameActivity" >
+        </activity>
+        <activity android:name="app.example.activity.SelectActivity" >
+        </activity>
+        <!-- 百度地图 -->
+        <activity android:name="com.example.baidumaplocation.BaiduActivity" >
+        </activity>
+        <activity android:name="com.example.baidumaplocation.BaiduShiWu" >
+        </activity>
+        <activity android:name="com.example.baidumaplocation.BaiduZhaoLing" >
+        </activity>
+        <activity android:name="com.example.baidumaplocation.BaiDuMain_found" >
+        </activity>
+        <activity android:name="com.example.baidumaplocation.BaiDuMain_lost" >
+        </activity>
+
+        <!-- 拍照上传 -->
+        <activity
+            android:name="com.king.photo.activity.AlbumActivityLost"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ImageFileLost" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ShowAllPhotoLost" >
+        </activity>
+        <activity android:name="com.king.photo.activity.GalleryActivityLost" >
+        </activity>
+        <activity android:name="com.king.photo.activity.AlbumActivityFound" >
+        </activity>
+        <activity android:name="com.king.photo.activity.GalleryActivityFound" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ImageFileFound" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ShowAllPhotoFound" >
+        </activity>
+        <activity android:name="com.king.photo.activity.AlbumActivityDiscover" >
+        </activity>
+        <activity android:name="com.king.photo.activity.GalleryActivityDiscover" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ImageFileDiscover" >
+        </activity>
+        <activity android:name="com.king.photo.activity.ShowAllPhotoDiscover" >
+        </activity>
+        <!-- 照片 -->
+
+        <activity
+            android:name="com.example.testpic.ImageGrid_lost_Activity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.testpic.ImageGrid_found_Activity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.testpic.ImageGrid_discover_Activity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.testpic.PublishedActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.testpic.TestPic_lost_Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.testpic.TestPic_found_Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.testpic.TestPic_discover_Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.testpic.PhotoActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 在校生与非在校生 -->
+        <activity android:name="app.example.activity.SchoolOrCity" >
+        </activity>
+        <activity
+            android:name="cn.smssdk.SMSSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 忘记密码 -->
+        <activity android:name="app.example.activity.Forget_Password" >
+        </activity>
+        <activity android:name="app.example.activity.ChangePasswordActivity" >
+        </activity>
+        <activity
+            android:name="app.example.activity.FeedbackActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.liucanwen.citylist.CityListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name="app.example.activity.SendMessage" >
+        </activity>
+        <activity
+            android:name="app.example.activity.ListViewMessageDetails"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity android:name="app.example.activity.Province" />
+        <activity android:name="app.example.activity.City" />
+        <activity android:name="app.example.activity.ChangeLocation" />
+        <activity android:name="app.example.activity.School" />
+        <activity android:name="app.example.activity.CityChange" />
+        <activity android:name="app.example.activity.SchoolChange" />
+        <activity android:name="app.example.activity.PersonalPage" />
+        <activity android:name="app.example.activity.Personal_Found" />
+        <activity android:name="app.example.activity.Personal_Discover" />
+        <activity android:name="app.example.activity.PublishWord" />
+        <!-- 失物。招领，发现记录页面 -->
+        <activity android:name="app.example.activity.LostRecord" />
+        <activity android:name="app.example.activity.FoundRecord" />
+        <activity android:name="app.example.activity.DiscoverRecord" />
+        <!-- 发现详情 -->
+        <activity
+            android:name="app.example.activity.DiscoverMesssageDetails"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity android:name="app.example.activity.WelcomeActivity" />
+        <!-- 服务条列详情 -->
+        <activity android:name="app.example.activity.ServiceActivity" />
+        <!-- 预览图片 -->
+        <activity android:name="app.example.activity.ImageActivity" >
+        </activity>
+        <activity android:name="app.example.activity.MessageWords" >
+        </activity>
+        <activity android:name="app.example.activity.MessageSystem" >
+        </activity>
+        <activity android:name="app.example.activity.MessageComments" >
+        </activity>
+        <activity
+            android:name="app.example.activity.CommentsToMessageDetail"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity android:name="app.example.aboutus.WelfareActivity" >
+        </activity>
+        <activity
+            android:name="app.example.activity.CommentsToMessageDiscoverDetailDetails"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <!-- 关于我们 -->
+        <activity android:name="app.example.aboutus.AboutUsActivity" />
+        <activity android:name="app.example.aboutus.PlatformActivity" />
+        <activity android:name="app.example.aboutus.TeamActivity" />
+        <activity android:name="app.example.activity.SystemUpActivity" />
+        <activity android:name="app.example.activity.SchoolServerPersonActivity" />
+        <activity android:name="app.example.activity.SchoolServerActivity" />
+
+        <!-- 以下是分享的 -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <!--
+            	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。 
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            -->
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="cn.sharesdk.demo.MyAdapter" />
+
+            <!--
+            	QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。 
+            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            	
+            <meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
+            -->
+            <!--
+            	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            -->
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!--
+            	如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            	事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+            	则分享结束以后不能得到正确的回调
+            -->
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="tx.ydd.app.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 调用新浪原生SDK，需要注册的activity -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+        <activity
+            android:name="cn.sharesdk.sina.weibo.SinaActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

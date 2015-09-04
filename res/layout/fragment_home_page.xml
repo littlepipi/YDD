@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BaiduActivity" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#36cd00" >
+
+        <HorizontalScrollView
+            android:id="@+id/fragment_home_page_scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/main_circle_shape"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/fragment_home_page_linearlayout"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/fragment_home_page_imageview"
+                    android:layout_width="84dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/main_circle_shape_sub_left" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/fragment_home_page_tab_kind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/locate_classify_orange_touched" />
+
+        <TextView
+            android:id="@+id/fragment_home_page_tab_city_school"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/locate_city_orange_gray"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="全国" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#808080"
+        android:orientation="vertical" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_home_page_tab_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background_green" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

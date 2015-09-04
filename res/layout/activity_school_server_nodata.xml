@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nodata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:text="目前还没有高校人员自荐为校园爱心公益大使哦，您还在等什么，赶紧发送简历到yidiudiu001@qq.com,第一的位置就是您的了，心动不如行动，我们期待您的加入哦！"
+        android:textSize="15sp" />
+
+</LinearLayout>

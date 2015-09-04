@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_transparent"
+     >
+
+    <LinearLayout
+        android:id="@+id/exit_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+       
+        android:orientation="vertical" >
+
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#808080" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/item_exit_useless"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="注销后将退出登录"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#808080" />
+
+            <Button
+                android:id="@+id/item_exit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:text="注销"
+                android:textColor="#ffa500"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#808080" /> 
+
+        <Button
+            android:id="@+id/item_exit_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:text="取消"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

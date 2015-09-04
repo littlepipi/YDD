@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55.0dip"
+            android:background="#808080" >
+
+            <ImageView
+                android:id="@+id/register_ins_page_four_back"
+                android:layout_width="14.0dip"
+                android:layout_height="14.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:contentDescription="@null"
+                android:duplicateParentState="true"
+                android:src="@drawable/arrow_left_gray_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="注册（4/4）"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/mine_back" >
+
+            <ImageView
+                android:id="@+id/register_ins_page_four_head_portrait"
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_gray"
+       />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/register_ins_page_four_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/icon_guest_count"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="昵称"
+            android:paddingTop="30dp" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/register_ins_page_four_PutInPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/icon_private"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="请输入6-18位密码"
+            android:inputType="textPassword"
+            android:paddingTop="20dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <EditText
+                android:id="@+id/register_ins_page_four_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/icon_private"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="确认密码" 
+                android:inputType="textPassword"/>
+
+            <ImageView
+                android:id="@+id/four_forget_password_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/forget_password_confirm" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_ins_page_four_finish"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#f5deb3"
+        android:text="完成注册"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/mine_back" >
+
+            <ImageView
+                android:id="@+id/personal_page_head_portrait"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_gray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/personal_page_head_portrait"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/personal_page_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昵称"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/personal_page_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="吉林大学"
+                    android:textColor="#fcd42d"
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="vertical" 
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#c1000000"
+                 >
+
+                <TextView
+                    android:id="@+id/personal_page_lost"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="失物信息"
+                    android:textColor="#fcd42d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/personal_page_find"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="招领信息"
+                    android:textColor="@color/normal_write_pressed_yellow"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/personal_page_discover"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="发现信息"
+                    android:textColor="@color/normal_write_pressed_yellow"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+            
+        </RelativeLayout>
+
+        
+    </LinearLayout>
+
+</RelativeLayout>

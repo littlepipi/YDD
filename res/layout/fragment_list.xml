@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green" >
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <net.loonggg.utils.AutoListView
+            android:id="@+id/fragment_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:divider="@null" />
+    </LinearLayout>
+
+    <include layout="@layout/no_data_view" />
+
+    <include layout="@layout/no_net_view" />
+
+</RelativeLayout>

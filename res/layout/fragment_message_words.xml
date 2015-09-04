@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/fragment_message_words_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <net.loonggg.utils.AutoListView
+                android:id="@+id/fragment_message_words_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:transcriptMode="normal"
+                android:visibility="visible" />
+
+            <include layout="@layout/no_data_word" />
+
+            <include layout="@layout/no_net_word" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/postlostmessagedetails"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="#36cd00" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="留言"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/post_lost_message_back1"
+                android:layout_width="50.0dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="#00808080"
+                android:contentDescription="@null"
+                android:src="@drawable/arrow_left_gray_white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/words_comments_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#36cd00"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1" >
+
+            <EditText
+                android:id="@+id/words_comments_input_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_comment_back"
+                android:ems="10"
+                android:paddingLeft="5dip" >
+            </EditText>
+
+            <Button
+                android:id="@+id/words_comments_send_message"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:background="@drawable/bg_comment_back_one"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="#808080" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

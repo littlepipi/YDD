@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <app.example.widget.OverScrollView
+            android:id="@+id/post_find_massage_scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="55dip"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="10dip"
+                    android:background="#d3d3d3"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="5dip"
+                        android:text="@string/title"
+                        android:textColor="#808080"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/post_discover_message_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_transparent_post"
+                        android:hint="不超过15个字..."
+                        android:maxLength="15"
+                        android:scrollHorizontally="false"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:textColor="#808080"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#d3d3d3"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="10dp"
+                    android:background="#d3d3d3"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:paddingLeft="5dip"
+                        android:paddingTop="10dp"
+                        android:text="@string/content"
+                        android:textColor="#808080"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/post_discover_message_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/shape_transparent_post"
+                        android:scrollHorizontally="false"
+                        android:selectAllOnFocus="true"
+                        android:gravity="top"
+                        android:singleLine="false"
+                        android:textColor="#808080"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#d3d3d3"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="10dp"
+                    android:background="#d3d3d3"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="5dip"
+                        android:text="@string/PostPicture"
+                        android:textColor="#808080"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip"
+                        android:background="#ffffff"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <GridView
+                        android:id="@+id/noScrollgridview3"
+                        android:layout_width="290dp"
+                        android:layout_height="140dp"
+                        android:layout_marginLeft="8dp"
+                        android:columnWidth="130dp"
+                        android:descendantFocusability="blocksDescendants"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="3"
+                        android:scrollbars="none"
+                        android:verticalSpacing="5dp" >
+                    </GridView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#d3d3d3"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/post_discover_message_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="90dip"
+                    android:background="@drawable/text_orange_pink"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </app.example.widget.OverScrollView>
+
+        <RelativeLayout
+            android:id="@+id/PostDiscoverMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#36cd00" >
+
+            <TextView
+                android:id="@+id/discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="发布发现信息"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/post_discover_message_back"
+                android:layout_width="50.0dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="#00808080"
+                android:contentDescription="@null"
+                android:src="@drawable/arrow_left_gray_white" />
+
+            <TextView 
+                android:id="@+id/postdiscovermessage_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

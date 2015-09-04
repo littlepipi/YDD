@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_list_selector_outside"
+        android:duplicateParentState="true"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <ImageView
+                android:id="@+id/head_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:focusable="false"
+                android:gravity="center"
+                android:src="@drawable/circle_gray"
+                android:text="" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:ellipsize="end"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/public_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:text="2015-03-14 12:35:56"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/delete_message"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.7"
+                android:focusable="false"
+                android:src="@drawable/delete"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="5dip"
+            android:background="#d3d3d3"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_list_selector_without"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="70dp"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.8"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_marginLeft="5dp"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:paddingTop="10dp"
+                                android:singleLine="true"
+                                android:text="啊哈哈，丢人啦啦啦"
+                                android:textColor="#a2793e"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:id="@+id/line1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/titletime"
+                                    android:layout_width="20dip"
+                                    android:layout_height="20dip"
+                                    android:background="@drawable/clock_num"
+                                    android:text=""
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="2015-04-25 23:59:59"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/titleplace"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:background="@drawable/map_num"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/title_detail"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:background="@drawable/details_num"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textdetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:ellipsize="end"
+                            android:gravity="top"
+                            android:maxLines="2"
+                            android:text=""
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="56dp"
+                    android:layout_height="78dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/lable_car"
+                    android:gravity="center"
+                    android:text="" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="115dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="2dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/meinv" />
+
+            <RelativeLayout
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/titleattention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="浏览量 "
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/titleattentionno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="   "
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/personlocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="吉林大学南湖校区通信工程学院覃宏艺"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/circle_shape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="评论"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/empty01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/circle_shape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="评论"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/circle_shape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="分享" />
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/circle_shape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="评论" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dip"
+            android:background="#808080"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

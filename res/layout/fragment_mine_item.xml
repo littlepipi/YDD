@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.example.layout.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5dc"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/yanse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/fragment_mine_ItemImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:scaleType="fitXY" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/fragment_mine_ItemText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:text="TextView01" >
+        </TextView>
+    </RelativeLayout>
+
+</app.example.layout.SquareLayout>

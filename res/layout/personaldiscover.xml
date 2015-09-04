@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5dc"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <net.loonggg.utils.Personal_Else_ListView
+                android:id="@+id/personal_edit_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_green"
+                android:divider="@null" />
+
+            <include layout="@layout/no_data_personal" />
+
+            <include layout="@layout/no_net_personal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/account_setting"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="#36cd00" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dip"
+                android:duplicateParentState="true"
+                android:text="个人发现信息"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/personal_page_back"
+                android:layout_width="50.0dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:contentDescription="@null"
+                android:src="@drawable/arrow_left_gray_white" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>
